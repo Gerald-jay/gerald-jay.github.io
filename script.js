@@ -1,4 +1,3 @@
-// Simple content switcher with active menu highlight
 document.addEventListener("DOMContentLoaded", () => {
   const sections = document.querySelectorAll(".content-region");
   const links = document.querySelectorAll(".main-menu a");
@@ -15,22 +14,25 @@ document.addEventListener("DOMContentLoaded", () => {
     if (activeLink) activeLink.classList.add("active");
   }
 
-  // Initial load
+  // Init
   showSection(location.hash);
 
-  // Handle clicks
-  links.forEach(l => {
-    l.addEventListener("click", e => {
-      e.preventDefault();
-      const href = l.getAttribute("href");
-      history.pushState(null, "", href);
-      showSection(href);
-    });
-  });
+  // Menu clicks
+	["click", "mouseenter"].forEach(evt => {
+	  links.forEach(l => {
+		l.addEventListener(evt, e => {
+		  e.preventDefault();
+		  const href = l.getAttribute("href");
+		  history.pushState(null, "", href);
+		  showSection(href);
+		});
+	  });
+	});
 
-  // Handle back/forward
+
+  // Back/forward
   window.addEventListener("popstate", () => showSection(location.hash));
 
-  // Year in footer
+  // Footer year
   document.getElementById("year").textContent = new Date().getFullYear();
 });

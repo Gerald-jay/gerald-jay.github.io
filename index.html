@@ -1,22 +1,21 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   <title>Gerald Jay · Portfolio</title>
-  <meta name="description" content="Personal site and projects">
-  <meta name="author" content="Gerald Jay">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/png" href="favicon.png">
+  <meta name="description" content="Personal site and projects" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/png" href="favicon.png" />
 
-  <!-- Normalize + Fonts -->
+  <!-- Fonts + Reset -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet"/>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet"/>
 
-  <!-- Custom Styles -->
-  <link href="style.css" rel="stylesheet"/>
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
+  <!-- Header -->
   <header id="header">
     <div class="brand">
       <img src="logo.png" alt="Logo"/>
@@ -24,32 +23,101 @@
     </div>
     <ul class="main-menu">
       <li><a href="#home">Home</a></li>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#clients">Clients</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </header>
 
+  <!-- Container -->
   <div id="container">
     <div class="inner">
       <div id="content">
-        <div id="home" class="content-region">
+        <!-- Home -->
+        <section id="home" class="content-region">
           <h2>Welcome</h2>
-          <p>Hello! This is my portfolio website. Explore the sections above to know more about me.</p>
-        </div>
+          <p>Hello! This is my portfolio site. Explore my work, clients, and background below.</p>
+        </section>
 
-        <div id="about" class="content-region hide">
-          <h2>About</h2>
-          <p>I’m a builder, learner, and dreamer. Passionate about software engineering, construction, and continuous growth.</p>
-        </div>
+        <!-- Work -->
+		<section id="work" class="content-region hide">
+		  <h2>My Work</h2>
 
-        <div id="contact" class="content-region hide">
-          <h2>Contact</h2>
-          <p>Email me at <a href="mailto:gerald.jay000@gmail.com">gerald.jay000@gmail.com</a></p>
-        </div>
+		  <div class="work-box">
+			<div class="work-text">
+			  <h3>Portfolio Template</h3>
+			  <p>A free open-source portfolio template for anyone.</p>
+			  <ul>
+				<li>HTML</li><li>SCSS</li><li>JavaScript</li><li>Java</li>
+			  </ul>
+			  <p><a href="https://github.com/Gerald-jay" target="_blank">Visit Site →</a></p>
+			</div>
+			<div class="work-image">
+			  <img src="images/project-1.png" alt="Portfolio Template" />
+			</div>
+		  </div>
+
+		  <div class="work-box">
+			<div class="work-text">
+			  <h3>Calculator</h3>
+			  <p>A simple calculator built with React & Next.js.</p>
+			  <ul>
+				<li>React</li><li>Next.js</li><li>Node</li><li>MongoDB</li>
+			  </ul>
+			  <p><a href="https://github.com/Gerald-jay" target="_blank">Visit Site →</a></p>
+			</div>
+			<div class="work-image">
+			  <img src="images/project-2.png" alt="Calculator Project" />
+			</div>
+		  </div>
+
+		  <div class="work-box">
+			<div class="work-text">
+			  <h3>Notificator</h3>
+			  <p>An app to send and manage notifications.</p>
+			  <ul>
+				<li>React</li><li>Next.js</li><li>Node</li><li>MongoDB</li>
+			  </ul>
+			  <p><a href="https://github.com/Gerald-jay" target="_blank">Visit Site →</a></p>
+			</div>
+			<div class="work-image">
+			  <img src="images/project-3.png" alt="Notificator Project" />
+			</div>
+		  </div>
+		</section>
+
+        <!-- Clients -->
+        <section id="clients" class="content-region hide">
+          <h2>Clients</h2>
+          <div class="client-logos">
+            <img src="images/ronjones.png" alt="Company 2" />
+            <img src="images/goldengrid.png" alt="Company 3" />
+            <img src="images/bullseye.png" alt="Company 1" />
+            <img src="images/mighty-furnitures.png" alt="Company 4" />
+            <img src="images/fastlane.png" alt="Company 5" />
+            <img src="images/chippy.png" alt="Company 6" />
+          </div>
+        </section>
+
+        <!-- About -->
+        <section id="about" class="content-region hide">
+          <h2>About Me</h2>
+          <p>I am a developer and researcher passionate about AI, construction, and education. I enjoy building useful tools and sharing knowledge.</p>
+          <p><a href="#" class="btn">Download Resume</a></p>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="content-region hide">
+          <h2>Get in Touch</h2>
+          <p>If you’d like to collaborate, ask questions, or just say hi 👋, feel free to contact me.</p>
+          <p><a href="mailto:gerald.jay000@gmail.com" class="btn">gerald.jay000@gmail.com</a></p>
+        </section>
       </div>
     </div>
   </div>
 
+  <!-- Footer -->
   <footer>
     © <span id="year"></span> Gerald Jay · All rights reserved
   </footer>
@@ -58,4 +126,3 @@
   <script src="script.js"></script>
 </body>
 </html>
-
